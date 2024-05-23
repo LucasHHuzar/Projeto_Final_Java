@@ -1,7 +1,9 @@
-package br.edu.up.projetoTeste;
+package br.edu.up.todolist;
 
 public class Main {
     public static void main(String[] args) {
+
         System.out.println("Hello world!");
+
     }
 }
