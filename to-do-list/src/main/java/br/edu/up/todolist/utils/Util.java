@@ -25,9 +25,10 @@ public class Util {
         } catch (InputMismatchException ex){
 
             logger.error("Ocorreu um erro ao tentar ler o console. Input diferente de INT!", ex);
-            scanner.next();
             return 99;
 
+        } finally {
+            scanner.nextLine();
         }
     }
 }
