@@ -47,6 +47,18 @@ public class ToDoView {
                 cadastrar(scanner);
                 break;
 
+                case 2:
+                cadastrar(scanner);
+                break;
+
+                case 3:
+                cadastrar(scanner);
+                break;
+
+                case 4:
+                listar();
+                break;
+
             case 99:
                 System.out.println("Você precisa informar um valor inteiro!");
                 break;
@@ -91,7 +103,16 @@ public class ToDoView {
     }
 
     private static void listar(){
+        var tarefas = TarefaController.listar();
 
+        System.out.println("========== LISTA DE TAREFAS ==============");
+
+        tarefas.forEach(tarefa -> {
+            System.out.println("UUID: " + tarefa.getUuid());
+            System.out.println("NOME: " + tarefa.getTitulo());
+        });
+
+        System.out.println("========= LISTA DE TAREFAS ===============");
     }
 
 
