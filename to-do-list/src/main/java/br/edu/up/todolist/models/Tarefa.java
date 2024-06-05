@@ -60,6 +60,11 @@ public class Tarefa implements FormatacaoEscrita {
         this.usuario = usuario;
     }
 
+    public void atualizarDados(Tarefa tarefa){
+        this.descricao = tarefa.getDescricao();
+        this.prioridade = tarefa.getPrioridade();
+    }
+
     public String dadosFormatado(){
         return this.uuid+";"+this.titulo+";"+this.descricao+";"+this.prioridade+";"+this.usuario.getUuid();
     }
